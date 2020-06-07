@@ -84,6 +84,7 @@ app.use("/graphql", ExpressGraphQL({
     graphiql: true         // Enables the GraphQL Playground
 }));
 
-app.listen(3000, () => {
-    console.log("Listening on port 3000...")
-}); 
+
+// Start listening to the server
+const port = process.env.PORT || 3000;
+app.listen(port, () => console.log(`Listening on port ${port}.... `));
